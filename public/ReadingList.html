@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <title>Colin Ooi's DS Assignment #1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">DS Assignment #1</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="UserInformation.html">User Information</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="ReadingList.html">Reading List<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+<br>
+<h1 id="top"><strong>2019 Reading List</strong></h1><a href="https://images.emojiterra.com/google/android-pie/512px/1f4d6.png"><img src="img/Book.png" alt="Book" title="Picture of Book" width="200" height="200"></a>
+<p class="sourcing">Source: Google Images</p>
+
+<!-- (title, author(s), year published, publisher, page count, MSRP) and four rows. -->
+<table class="table table-bordered table-striped table-hover">
+
+  <tr>
+    <th>Book Title</th>
+    <th>Author(s)</th>
+    <th>ISBN</th>
+    <th>Year Published</th>
+    <th>Publisher</th>
+    <th>Page Count</th>
+    <th>MSRP</th>
+  </tr>
+
+  <tbody>
+    <tr>
+      <td>Billion Dollar Whale</td>
+      <td>Bradley Hope, Tom Wright</td>
+      <td>1912854546</td>
+      <td>2019</td>
+      <td>Scribe UK</td>
+      <td>400</td>
+      <td>$11.61</td>
+    </tr>
+    <tr>
+      <td>Flow: The Psychology of Optimal Experience</td>
+      <td>Mihaly Csikszentmihalyi</td>
+      <td>0061339202</td>
+      <td>2008</td>
+      <td>Harper Perennial Modern Classics</td>
+      <td>334</td>
+      <td>$12.86</td>
+    </tr>
+    <tr>
+      <td>Good to Great: Why Some Companies Make the Leap and Others Don't</td>
+      <td>Jim Collins</td>
+      <td>9780066620992</td>
+      <td>2001</td>
+      <td>HarperBusiness</td>
+      <td>400</td>
+      <td>$12.94</td>
+    </tr>
+    <tr>
+      <td>Zero to One: Notes on Startups, or How to Build the Future</td>
+      <td>Peter Thiel</td>
+      <td>9780804139298</td>
+      <td>2014</td>
+      <td>Currency</td>
+      <td>224</td>
+      <td>$16.69</td>
+    </tr>
+    <tr>
+      <td>Calvin & Hobbes Volume 1</td>
+      <td>Bill Watterson</td>
+      <td>0836220889</td>
+      <td>1987</td>
+      <td>Andrews McMeel Publishing</td>
+      <td>128</td>
+      <td>$11.29</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2>Add a New Book</h2>
+
+<!-- Form & button sourced from Bootstrap and my Previous Project -->
+
+<form action="" method="post">
+
+<fieldset>
+<legend>Book Information</legend>
+<label for="type_book">Book </label>
+<input type="radio" name="type" id="type_book" value="Book">
+<label for="type_audiobook">Audiobook </label>
+<input type="radio" name="type" id="type_Audiobook" value="Audiobook"><br>
+
+<div class="input-group">
+<label class="input-group-addon" for="booktitle">Book Title: </label>
+<input class="form-control" type="text" name="booktitle" id="booktitle" placeholder="Enter Book Title" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="authors">Author(s): </label>
+<input class="form-control" type="text" name="authors" id="authors" placeholder="Enter Author(s) Name" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="isbn">ISBN: </label>
+<input class="form-control" type="text" name="isbn" id="isbn" placeholder="Enter 10-digit ISBN" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="publishYear">Year Published: </label>
+<input class="form-control" type="text" name="publishYear" id="publishYear" placeholder="Enter Year book was published" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="publisher">Publisher: </label>
+<input class="form-control" type="text" name="publisher" id="publisher" placeholder="Enter Name of Publishing House" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="pages">Page Count: </label>
+<input class="form-control" type="text" name="pages" id="pages" placeholder="Enter # of Pages" required><br>
+</div>
+
+<div class="input-group">
+<label class="input-group-addon" for="MSRP">MSRP: </label>
+<input class="form-control" type="text" name="MSRP" id="MSRP" placeholder="Enter MSRP" required><br>
+</div>
+
+<div class="input-group">
+
+</div>
+</fieldset>
+
+</form>
+
+<a class="center-block btn btn-primary btn-lg btn-block">Add Book</a>
+
+</div>
+
+</body>
+</html>
