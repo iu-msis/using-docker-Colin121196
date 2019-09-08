@@ -33,7 +33,7 @@
 <p class="sourcing">Source: Google Images</p>
 
 <!-- (title, author(s), year published, publisher, page count, MSRP) and four rows. -->
-<table class="table table-bordered table-striped table-hover">
+<table id="BookTable" class="table table-bordered table-striped table-hover">
 
   <tr>
     <th>Book Title</th>
@@ -153,6 +153,14 @@
 <a class="center-block btn btn-primary btn-lg btn-block">Add Book</a>
 
 </div>
+
+<!-- Tablesort functionality from http://tristen.ca/tablesort/demo/ -->
+
+<script src="js/tablesort.min.js"></script>
+
+<script>
+  new Tablesort(document.getElementById('BookTable'));
+</script>
 
 </body>
 </html>
