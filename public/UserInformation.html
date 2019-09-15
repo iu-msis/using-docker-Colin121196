@@ -32,15 +32,22 @@
   <h1 id="top"><strong>Learn More About Me!</strong></h1>
   <!-- name, country or origin, birthdate, age, email address -->
   <a href="https://vignette.wikia.nocookie.net/candh/images/e/ed/Cavintrans.png/revision/latest?cb=20190811185051"><img src="img/Calvin.png" title="Picture of Me" alt="Picture of user"></a>
-  <p class="sourcing">Source: Google Images</p>
+  <p class="sourcing">Source: RandomUser.me</p>
   <h2><strong>Name:</strong> Calvin Smith</h2>
   <h2><strong>Country of Origin:</strong> USA (Boston,MA)</h2>
   <h2><strong>Birthdate:</strong> 10/10/1989</h2>
   <h2><strong>Age:</strong> 29</h2>
   <h2><strong>Email Address:</strong> <a href="mailto:calvinball@gmail.com?subject=hello">calvinball@gmail.com</a></h2>
 
-</div>
+  <div id="userProfileApp">
+    <div v-for="patient in patients">
+              <span class="patientName">{{ patients.results[0].gender }}</span>,
+              <span class="patientName">{{ patients.results[0].name.first }}</span>,
+  </div>
+  </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/ProfileInformation.js"></script>
 
 </body>
 </html>
