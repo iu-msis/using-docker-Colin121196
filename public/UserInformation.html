@@ -31,19 +31,17 @@
   <br>
   <h1 id="top"><strong>Learn More About Me!</strong></h1>
   <!-- name, country or origin, birthdate, age, email address -->
-  <a href="https://vignette.wikia.nocookie.net/candh/images/e/ed/Cavintrans.png/revision/latest?cb=20190811185051"><img src="img/Calvin.png" title="Picture of Me" alt="Picture of user"></a>
-  <p class="sourcing">Source: RandomUser.me</p>
-  <h2><strong>Name:</strong> Calvin Smith</h2>
-  <h2><strong>Country of Origin:</strong> USA (Boston,MA)</h2>
-  <h2><strong>Birthdate:</strong> 10/10/1989</h2>
-  <h2><strong>Age:</strong> 29</h2>
-  <h2><strong>Email Address:</strong> <a href="mailto:calvinball@gmail.com?subject=hello">calvinball@gmail.com</a></h2>
 
   <div id="userProfileApp">
-    <div v-for="patient in patients">
-              <span class="patientName">{{ patients.results[0].gender }}</span>,
-              <span class="patientName">{{ patients.results[0].name.first }}</span>,
-  </div>
+      <img v-bind:src=users.results[0].picture.large title="Picture of Me" alt="Picture of user">
+      <!-- V-Bind SRC credit to VueJS forums -->
+      <p class="sourcing">Source: RandomUser.me</p>
+      <h2><strong>First Name:</strong><span> {{ users.results[0].name.first }}</span></h2><br>
+      <h2><strong>Last Name:</strong><span> {{ users.results[0].name.last }}</span></h2><br>
+      <h2><strong>Country of Origin:</strong><span> {{ users.results[0].nat }}</span></h2><br>
+      <h2><strong>Birthdate:</strong><span> {{ users.results[0].dob.date }}</span></h2><br>
+      <h2><strong>Email Address:</strong><span><a v-bind:href="`mailto:${users.results[0].email}`"> {{ users.results[0].email }}</a></span></h2>
+      <!-- Mailto credit from VueJS forums -->
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
