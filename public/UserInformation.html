@@ -32,7 +32,8 @@
   <h1 id="top"><strong>Learn More About Me!</strong></h1>
   <!-- name, country or origin, birthdate, age, email address -->
 
-  <div id="userProfileApp">
+  <div id="userProfileApp" v-if="users.results" :key="componentKey">
+      <!-- Credit from VueJS forums https://forum.vuejs.org/t/vue-warn-error-in-render-typeerror-cannot-read-property-0-of-undefined/28415 -->
       <img v-bind:src=users.results[0].picture.large title="Picture of Me" alt="Picture of user">
       <!-- V-Bind SRC credit to VueJS forums -->
       <p class="sourcing">Source: RandomUser.me</p>
@@ -44,8 +45,14 @@
       <!-- Mailto credit from VueJS forums -->
   </div>
 
+    <div id="userProfileApp">
+    <button v-on:click="forceRerender">Reload!</button>
+    </div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/ProfileInformation.js"></script>
+
+
 
 </body>
 </html>
