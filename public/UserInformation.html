@@ -46,7 +46,9 @@
   </div>
 
     <div id="userProfileApp">
-    <button v-on:click="forceRerender">Reload!</button>
+    <form v-on:submit="handleSubmit">
+    <button>Reload Page!</button>
+    </form>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
